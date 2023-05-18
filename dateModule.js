@@ -1,3 +1,0 @@
-function dateTime() {
-  return Date();
-}
