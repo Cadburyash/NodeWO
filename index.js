@@ -1,3 +1,9 @@
-var chalk = require("chalk");
+var fs = require("fs");
 
-console.log(chalk.green.underline.italic("in green"));
+fs.appendFile("names.txt", "fileName \n", (err) => {
+  if (err) {
+    throw err;
+  } else {
+    console.log("File names updated");
+  }
+});
