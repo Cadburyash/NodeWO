@@ -5,6 +5,11 @@ const port = process.env.port || 8080;
 
 app.use(express.static(__dirname + "/public"));
 
+
+app.get('/download/:filename', (req,res)=>{
+  
+})
+
 app.get("/", (req, res) => {
   res.send("welcome to Express server");
 });
