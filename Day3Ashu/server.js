@@ -1,13 +1,11 @@
 const express = require("express");
 
 const app = express();
+const router = require("./routes");
 
 PORT = 8080;
 
-app.get("/", (req, res) => {
-  res.send("This is HomePage");
-});
-
+app.use(router);
 app.listen(PORT, () => {
   console.log("server is running on port", PORT);
 });
