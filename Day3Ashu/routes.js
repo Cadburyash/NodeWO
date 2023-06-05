@@ -8,4 +8,8 @@ router.post("/signup", (req, res) => {
   });
 });
 
-module.exports = routes;
+router.get("/", (req, res) => {
+  res.send("This is HomePage");
+});
+
+module.exports = router;
