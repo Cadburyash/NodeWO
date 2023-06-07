@@ -1,6 +1,18 @@
+const service = require("./service");
+
 exports.signup = (req, res) => {
   console.log("Reached Signup Page", req.body);
-  res.send("Signed up");
+  service.createuser(req.body, (error, result) => {
+    if (error) {
+      res.status(500).send({
+        message: "Internal Server Error",
+      });
+    } else {
+      res.send({
+        message: "Signed Up",
+      });
+    }
+  });
 };
 
 exports.login = (req, res) => {
