@@ -5,7 +5,7 @@ exports.signup = (req, res) => {
   service.createuser(req.body, (error, result) => {
     if (error) {
       res.status(500).send({
-        message: "Internal Server Error",
+        error: "Internal Server Error",
       });
     } else {
       res.send({
