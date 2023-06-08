@@ -2,6 +2,7 @@ const service = require("./service");
 
 exports.signup = (req, res) => {
   console.log("Reached Signup Page", req.body);
+  
   service.createuser(req.body, (error, result) => {
     if (error) {
       res.status(500).send({
@@ -25,3 +26,4 @@ exports.alluser = (req, res) => {
     users: ["ashish", "bijlee", "niru"],
   });
 };
+ 

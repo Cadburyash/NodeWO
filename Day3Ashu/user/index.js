@@ -7,4 +7,7 @@ routes.post("/signup", Controller.signup);
 routes.post("/login", Controller.login);
 
 routes.get("/alluser", Controller.alluser);
+
+
+
 module.exports = routes;
